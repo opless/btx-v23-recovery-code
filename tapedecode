@@ -1,0 +1,12 @@
+#!/bin/sh
+# tapedecode IN OUT: decode Bildschirmtext pages from audio recordings.
+# On first run, sets up .venv next to this script with numpy, scipy and Pillow.
+set -e
+here=$(cd "$(dirname "$0")" && pwd)
+venv="$here/.venv"
+if [ ! -x "$venv/bin/python" ]; then
+    echo "tapedecode: setting up $venv" >&2
+    python3 -m venv "$venv"
+    "$venv/bin/pip" install -q -r "$here/requirements.txt"
+fi
+exec "$venv/bin/python" "$here/tapedecode.py" "$@"
