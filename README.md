@@ -49,7 +49,7 @@ at least one copy, and you should look at the chosen page. "single copy" means t
 was nothing to cross-check it against.
 
 ### Potential issue
-You might want to change this to something suitable for your system:
+You might want to change this (in cept_renderer.py) to something suitable for your system:
 ```python
 584:             font2[key] = ImageFont.truetype("/System/Library/Fonts/Menlo.ttc", 25 * h // CH)
 ```
