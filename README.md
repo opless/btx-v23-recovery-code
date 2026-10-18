@@ -47,3 +47,9 @@ Each script also runs on its own:
 Check the `notes` column in `index.md`. "copies differ" means the tape was damaged in
 at least one copy, and you should look at the chosen page. "single copy" means there
 was nothing to cross-check it against.
+
+### Potential issue
+You might want to change this to something suitable for your system:
+```python
+584:             font2[key] = ImageFont.truetype("/System/Library/Fonts/Menlo.ttc", 25 * h // CH)
+```
